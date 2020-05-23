@@ -1,0 +1,14 @@
+div.tranbox{
+  /* background-color: #fdfffc; */
+  background-image: url(../images/image2.jpg);
+  opacity: 0.9;
+  color: black;
+  background-size: cover;
+  border-radius: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+div.tranbox p{
+  font-weight: bold;
+  color: #000000;
+}

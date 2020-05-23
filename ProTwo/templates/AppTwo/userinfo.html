@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends "AppTwo/base.html" %}
+{% block body_block %}
+
+        <h1>User information list :</h1>
+        {% if user_temp_ref %}
+
+          <ol type="1">
+            {% for rec in user_temp_ref %}
+            <li>User Info</li>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">{{ rec.First_Name }}</li>
+              <li class="list-group-item">{{ rec.Last_Name }}</li>
+              <li class="list-group-item">{{ rec.User_Email }}</li>
+            </ul>
+            {% endfor %}
+          </ol>
+
+          {% else %}
+            <p> No user information available in database!! </p>
+          {% endif %}
+      </div>
+    </div>
+    <div class="container">
+      <div class="jumbotron tranbox">
+        <form method="POST">
+
+          {{ userform1.as_p }}
+          {% csrf_token %}
+
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+{% endblock %}

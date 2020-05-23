@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First_app help page</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body>
+    <h1>Welcome to the help page of first_app</h1>
+    <p></p>
+    <div>
+      <table>
+        <tr>
+          <td id='headerrec'>Follow below instructions for the help</td>
+          <td><img src="{% static "images/Helpline.jpg" %}" alt=""></td>
+        </tr>
+        <tr>
+          <td>Please call our 24X7 helpline number</td>
+          <td>{{ num1 }}</td>
+        </tr>
+        <tr>
+          <td>Please write to us on</td>
+          <td>{{ email }}</td>
+        </tr>
+        <tr>
+          <td>Please send whatsapp message on</td>
+          <td>{{ num2 }}</td>
+        </tr>
+
+      </table>
+    </div>
+
+
+  </body>
+</html>

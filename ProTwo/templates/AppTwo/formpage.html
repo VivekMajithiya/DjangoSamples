@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "AppTwo/base.html" %}
+{% block body_block %}
+        <h1>Please fill up the form!!!</h1>
+        <br>
+        <form method="post">
+          <div class="form-group">
+            {{ form.as_p }}
+            {% csrf_token %}
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Listing Access tracking history</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body>
+    <h1>This is the page to test model data loading for access tracker table!!</h1>
+    <p>Below is the access tracking history of all company websites!!</p>
+    {% if acc_records %}
+      <table>
+        <thead>
+          <th>Site name</th>
+          <th>Date last accessed on</th>
+        </thead>
+
+          {% for rec in acc_records %}
+            <tr>
+              <td>{{ rec.name }}</td>
+              <td>{{ rec.date }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+      <table>
+        <tr>
+          <td><p>Number of records fetched : {{ count }}</p></td>
+        </tr>
+      </table>
+    {% else %}
+      <p>There are no records to display!!</p>
+    {% endif %}
+  </body>
+</html>
